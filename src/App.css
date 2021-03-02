@@ -2,9 +2,19 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background-color: #11263B;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px 0px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
