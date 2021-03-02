@@ -1,6 +1,11 @@
 .CardProduct {
     border: 1px solid #000;
-    padding: 20px;
     border-radius: 10px;
     margin: 10px;
+    overflow:hidden;
+}
+
+.background-name {
+    background-color: #11263B;
+    color: #fff;
 }

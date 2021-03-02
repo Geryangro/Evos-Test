@@ -1,11 +1,10 @@
 .section-detail {
     border: 1px solid #000;
-    padding: 20px 30px;
     border-radius: 10px;
     margin-top: 20px;
+    overflow:hidden;
 }
 
 .title {
     font-size: 30px;
-    margin-bottom: 20px;
 }

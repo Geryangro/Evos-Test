@@ -28,9 +28,11 @@ function Detail({ location }) {
     return (
         <div className="section-detail">
             <div className="text-left">
-                <h1 className="title text-lg">Biodata Person</h1>
-                <h1 className="text-lg">Name : {data.name}</h1>
-                <div>
+                <div className="background-name p-6">
+                    <h1 className="title text-lg">Biodata Person</h1>
+                    <h1 className="text-lg">Name : {data.name}</h1>
+                </div>
+                <div className="p-6">
                     <p>Birth Year : {data.birth_year}</p>
                     <p>Gender : {data.gender}</p>
                     <p>Eye Color : {data.eye_color}</p>
