@@ -55,15 +55,17 @@ function Home() {
         <div className="App">
             {!loading && (
                 <>
-                    {data ? data.map((item, key) => {
-                        return (
-                            <div key={key}>
-                               <Card data={item} />
-                            </div>
-                        )
-                    }) : (
-                        <div>not found</div>
-                    )}
+                    <div className="grid grid-cols-2">
+                        {data ? data.map((item, key) => {
+                            return (
+                                <div key={key}>
+                                <Card data={item} />
+                                </div>
+                            )
+                        }) : (
+                            <div>not found</div>
+                        )}
+                    </div>
                     {currentPage !== totalPage && (totalData > 7 && <Waypoint
                         onEnter={() => handleLoadMore()}
                     />)}
