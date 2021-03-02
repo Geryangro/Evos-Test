@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { findIdPage } from "@helpers"
+import PropTypes from "prop-types";
 import "./style.css"
 
 const Card = ({ data }) => {
@@ -23,5 +24,9 @@ const Card = ({ data }) => {
         </Link>
     )
 }
+
+Card.propTypes = {
+    data: PropTypes.object,
+};
 
 export default Card

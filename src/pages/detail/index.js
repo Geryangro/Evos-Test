@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { get } from '@service';
+import PropTypes from "prop-types";
 import "./style.css"
 
 
@@ -27,20 +28,26 @@ function Detail({ location }) {
 
     return (
         <div className="section-detail">
-            <div className="text-left">
-                <div className="background-name p-6">
-                    <h1 className="title text-lg">Biodata Person</h1>
-                    <h1 className="text-lg">Name : {data.name}</h1>
+            {!loading && (
+                <div className="text-left">
+                    <div className="background-name p-6">
+                        <h1 className="title text-lg">Biodata Person</h1>
+                        <h1 className="text-lg">Name : {data.name}</h1>
+                    </div>
+                    <div className="p-6">
+                        <p>Birth Year : {data.birth_year}</p>
+                        <p>Gender : {data.gender}</p>
+                        <p>Eye Color : {data.eye_color}</p>
+                        <p>Hair Color : {data.hair_color}</p>
+                    </div>
                 </div>
-                <div className="p-6">
-                    <p>Birth Year : {data.birth_year}</p>
-                    <p>Gender : {data.gender}</p>
-                    <p>Eye Color : {data.eye_color}</p>
-                    <p>Hair Color : {data.hair_color}</p>
-                </div>
-            </div>
+            )}
         </div>
     );
 }
+
+Detail.propTypes = {
+    id: PropTypes.string,
+};
 
 export default Detail;
