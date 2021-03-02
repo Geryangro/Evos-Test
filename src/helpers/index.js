@@ -41,3 +41,8 @@ export const removeEmptyAttributes = (objParams) => {
     }
     return dataParams;
 };
+
+export const findIdPage = (query) => {
+    const number = query.replace(/\D/g, '');
+    return number
+}
